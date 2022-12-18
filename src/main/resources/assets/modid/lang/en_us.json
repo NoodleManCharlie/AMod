@@ -1,0 +1,20 @@
+{
+    "item.modid.bean": "Bean",
+    "item.modid.Bean.tooltip": "Are you Insane?",
+    
+    "block.modid.beanblock": "Bean Block",
+
+    "item.modid.beanhelmet": "Bean Helmet",
+    "item.modid.beanchestplate": "Bean Chestplate",
+    "item.modid.beanleggings": "Bean Leggings",
+    "item.modid.beanboots": "Bean Boots",
+    
+    "item.modid.beansword": "Bean Sword",
+    "item.modid.beanaxe": "Bean Axe",
+    "item.modid.beanpickaxe": "Bean Pickaxe",
+    "item.modid.beanshovel": "Bean Shovel",
+    "item.modid.beanhoe": "Bean Hoe",
+
+    "enchantment.modid.beanenchant": "Beans",
+    "enchantment.modid.depressionenchant": "Depression"
+}

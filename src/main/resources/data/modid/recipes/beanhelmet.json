@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "W W",
+        "   "
+      ],
+      "key": {
+        "W": {
+          "item": "modid:beanblock"
+        }
+      },
+    "result": {
+      "item": "modid:beanhelmet",
+      "count": 1
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "modid:beanblock"
+      }
+    ],
+    "result": {
+      "item": "modid:bean",
+      "count": 1
+    }
+}

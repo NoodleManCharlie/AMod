@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "modid:bean"
+    },
+    "result": "modid:beanblock",
+    "experience": 2,
+    "cookingtime": 25
+}
