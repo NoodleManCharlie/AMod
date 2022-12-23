@@ -1,8 +1,18 @@
 package net.fabricmc.example.item;
 
+import net.fabricmc.example.blocks.BeanChest;
+import net.fabricmc.example.blocks.BeanChestEntity;
+import net.fabricmc.example.ExampleMod;
+
 import net.fabricmc.example.enchantments.BeanEnchant;
 import net.fabricmc.example.enchantments.DepressionEnchant;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
+import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
@@ -25,6 +35,8 @@ public class Registery {
 
     public static Enchantment BeanEnchant = new BeanEnchant();
     public static Enchantment DepressionEnchant = new DepressionEnchant();
+
+    public static final BlockEntityType<BeanChestEntity> BeanChestEntitie = FabricBlockEntityTypeBuilder.create(BeanChestEntity::new, ExampleMod.BeanChestBlock).build();
 
     public static void register()
     {
@@ -54,5 +66,7 @@ public class Registery {
 
         Registry.register(Registries.ENCHANTMENT, new Identifier("modid", "beanenchant"), BeanEnchant);
         Registry.register(Registries.ENCHANTMENT, new Identifier("modid", "depressionenchant"), DepressionEnchant);
+
+        Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier("modid", "beanchest"), BeanChestEntitie);
     }
 }

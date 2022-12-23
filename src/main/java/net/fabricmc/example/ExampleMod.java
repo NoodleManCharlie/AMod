@@ -1,6 +1,8 @@
 package net.fabricmc.example;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.example.blocks.BeanChestEntity;
+import net.fabricmc.example.blocks.BeanChest;
 import net.fabricmc.example.item.ModBlocks;
 import net.fabricmc.example.item.ModItems;
 import net.fabricmc.example.item.Registery;
@@ -9,11 +11,13 @@ import net.fabricmc.example.item.bean;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -44,6 +48,9 @@ public class ExampleMod implements ModInitializer {
 	public static final Block Beanblock = ModBlocks.registerBlocks("beanblock", new Block(FabricBlockSettings.of(Material.METAL, MapColor.DIRT_BROWN).breakInstantly().jumpVelocityMultiplier(50).sounds(BlockSoundGroup.AZALEA_LEAVES).luminance(2000)));
     public static final BlockItem beanitem = ModItems.registerBlockItem("beanblock", new BlockItem(Beanblock, new FabricItemSettings()), ItemGroups.BUILDING_BLOCKS);
 
+	public static final Block BeanChestBlock = ModBlocks.registerBlocks("beanchest", new Block(FabricBlockSettings.of(Material.METAL, MapColor.DIRT_BROWN)));
+    public static final BlockItem BeanChestitem = ModItems.registerBlockItem("beanchest", new BlockItem(BeanChestBlock, new FabricItemSettings()), ItemGroups.BUILDING_BLOCKS);
+
 	@Override
 	public void onInitialize() {
 
@@ -59,6 +66,7 @@ public class ExampleMod implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		Registery.register();
+		
 
 	}
 
