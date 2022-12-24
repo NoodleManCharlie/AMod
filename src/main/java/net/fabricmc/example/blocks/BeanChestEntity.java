@@ -16,7 +16,7 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 
 public class BeanChestEntity extends BlockEntity implements ImplementedInventory {
-    private final DefaultedList<ItemStack> items = DefaultedList.ofSize(90, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> items = DefaultedList.ofSize(2, ItemStack.EMPTY);
 
     public BeanChestEntity(BlockPos pos, BlockState state) {
         super(Registery.BeanChestEntitie, pos, state);
